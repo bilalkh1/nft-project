@@ -3,9 +3,14 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'nft',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  }
+  },
+  {
+    path: '',
+    redirectTo: 'nft',
+    pathMatch: 'full',
+  },
 ];
 @NgModule({
   imports: [
