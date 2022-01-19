@@ -1,0 +1,73 @@
+
+.collection {
+  .collection-header {
+    background-image: url("https://lh3.googleusercontent.com/tiDirQ65WcCxPh0d6mQoleLloF4Ao_FVAvSbKY0VSIlOQqeTqphr6q3nQesO8SPwFhMQG6-rkDQqiH-eEl-nbIyUcW5dQshff1BEe_E=h220");
+    height: 240px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    overflow: hidden;
+
+    ion-icon.arrow-back {
+      color: #fff;
+      font-size: 25px;
+    }
+
+    .under-collection-header {
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 25px 20px;
+
+      .social-media {
+        margin-top: 15px;
+        ion-icon {
+          font-size: 19px;
+          color: #fff;
+        }
+      }
+
+      h2 {
+        font-weight: bold;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.collection-body {
+  .price-items {
+    h4 {
+      font-weight: bold;
+      color: #1F3D57;
+    }
+
+    h5 {
+      font-weight: bold;
+      color: #A3B7BE;
+    }
+  }
+}
+
+.items {
+  h3 {
+    margin-top: 0!important;
+    font-weight: bold;
+  }
+
+  h6 {
+    color: #000;
+    font-weight: bold;
+  }
+
+  ion-card {
+    border-radius: 10px;
+    box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.25);;
+  }
+}
+
+.w-65 {
+  width: 65%!important;
+}

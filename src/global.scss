@@ -24,3 +24,43 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap');
+
+body, ion-content {
+  font-family: 'Poppins', sans-serif!important;
+  background-color: #FBFCFE!important;
+}
+
+
+.d-flex {
+  display: flex!important;
+}
+
+.justify-content-between {
+  justify-content: space-between!important;
+}
+
+.align-items-center {
+  align-items: center!important;
+}
+
+.mt-2 {
+  margin-top: 5px;
+}
+
+
+.bg-primary {
+  background-color: #39AFA1;
+}
+
+
+mx-2 {
+  margin-right: 15px!important;
+  margin-left: 15px!important;
+}
+
+
+.font-weight-bold {
+  font-weight: bold!important;
+}

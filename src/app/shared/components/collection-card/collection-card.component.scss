@@ -1,0 +1,27 @@
+ion-card {
+  h4, h6 {
+    color: #1F3D57;
+    font-weight: bold;
+  }
+
+  h4.title {
+    font-size: 18px;
+  }
+  box-shadow: 0px 4px 6px -1px rgb(0 0 0 / 15%)!important;
+  border-radius: 10px;
+  ion-img {
+    width: 160%!important;
+  }
+
+  h4.price {
+    font-size: 17px;
+
+    img {
+      margin-right: 5px;
+    }
+  }
+
+  h5 {
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,60 @@
+<ion-content>
+  <div class="collection">
+    <div class="collection-header">
+      <div class="under-collection-header">
+        <ion-icon name="arrow-back" class="arrow-back"></ion-icon>
+        <div>
+          <h2>Typical Tigers</h2>
+          <div class="social-media d-flex justify-content-between align-items-center w-65">
+            <ion-icon name="logo-discord"></ion-icon>
+            <ion-icon name="logo-instagram"></ion-icon>
+            <ion-icon name="logo-twitter"></ion-icon>
+            <ion-icon name="link-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="collection-body">
+      <div class="price-items">
+        <div class="d-flex justify-content-between align-items-center ion-margin-horizontal">
+          <h4>Price</h4>
+          <h4><img src="../../../assets/Vector.svg" alt="" width="9"> 400</h4>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center ion-margin-horizontal">
+          <h4>200 Items</h4>
+          <h5>Rarity</h5>
+        </div>
+      </div>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <h3 class="font-weight-bold">Description</h3>
+            <p>A collection brought to you by MADworld, A sneak beak at Life Beyond the Bath Tub! Be a part of the Founding Feathers, B.Ducks are leaving the tub!</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid class="items">
+        <ion-row>
+          <ion-col size="12">
+            <h3>Items</h3>
+          </ion-col>
+          <ion-col size="6" *ngFor="let i of [].constructor(20)">
+            <ion-card>
+              <div class="bg-primary">
+                <ion-img [src]="'https://www.larvalabs.com/public/images/cryptopunks/punk7523.png'"></ion-img>
+              </div>
+              <ion-card-content>
+                <h6>Awesome content</h6>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+  </div>
+</ion-content>
