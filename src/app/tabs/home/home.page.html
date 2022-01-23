@@ -1,9 +1,128 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <ion-grid class="hero-section">
+    <ion-img src="assets/svg/hero-img.svg"></ion-img>
+    <ion-row>
+      <ion-col size="12">
+        <h1 class="hero-title font-weight-bold ion-text-center">Search Best <br>NFTs With us</h1>
+      </ion-col>
+      <ion-col size="12">
+        <h6 class="hero-text ion-text-center">The best platform to buy and sell NFT quickly and easily</h6>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="release-section">
+    <ion-row>
+      <ion-col size="12">
+        <div class="d-flex ion-justify-content-between ion-align-items-center">
+          <h6 class="release-section-title font-weight-bold">New Release</h6>
+          <span class="see-all">see all</span>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <div *ngFor="let item of [].constructor(3)">
+          <ion-card class="ion-padding-horizontal">
+            <div class="content d-flex justify-content-around ion-align-items-center">
+              <ion-img class="release-card-img"
+                [src]="'https://lh3.googleusercontent.com/_hn57CNgbtqSi7fmGhXsBpRk0Ocb0lnQFzHku9hVw1pvtkAtvmXf7k3X6HYqhVwDy4C47McDmikN9Gi5kNrdrVFQG5l0sVeqavCPGQ=s100'"
+                alt="collection img"></ion-img>
+              <ion-card-content>
+                <div>
+                  <h6 class="release-card-title font-weight-bold">Rowdy Roos</h6>
+                  <p class="release-card-text">After their home planet BOBL was destroyed, 9,999 of the rowdiest</p>
+                </div>
+              </ion-card-content>
+              <ion-img src="assets/svg/arrow.svg" alt="arrow"></ion-img>
+            </div>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="all-collections">
+    <ion-row>
+      <ion-col size="12">
+        <h3 class="all-collections-title font-weight-bold ion-text-center">Top Collections</h3>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card class="ion-padding">
+          <div *ngFor="let item of [].constructor(4);let i=index"
+            class="content d-flex ion-justify-content-between ion-align-items-center ion-margin-bottom">
+            <h1 class="collection-number">{{i+1}}</h1>
+            <div class="collection-content d-flex">
+              <ion-img class="collection-img"
+                [src]="'https://lh3.googleusercontent.com/_hn57CNgbtqSi7fmGhXsBpRk0Ocb0lnQFzHku9hVw1pvtkAtvmXf7k3X6HYqhVwDy4C47McDmikN9Gi5kNrdrVFQG5l0sVeqavCPGQ=s100'"
+                alt="collection img"></ion-img>
+              <ion-card-content>
+                <div>
+                  <h6 class="collection-title font-weight-bold">Rowdy Roos</h6>
+                  <p class="collection-text d-flex">16,666.24 <ion-img class="collection-eth" src="assets/svg/eth.svg"
+                      alt="eth" style="width: 10px"></ion-img>
+                  </p>
+                </div>
+              </ion-card-content>
+            </div>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="setup-section">
+    <ion-row>
+      <ion-col size="12">
+        <h3 class="setup-section-title ion-text-center font-weight-bold">Create and sell your NFTs</h3>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="setup-section-container ion-justify-content-between" size="12">
+        <ion-card class="setup-card ion-padding">
+          <div class="setup-card-content">
+            <div class="d-flex ion-justify-content-between ion-align-items-center">
+              <h1 class="setup-card-title font-weight-bold">Set up your <br>wallet</h1>
+              <ion-img class="setup-card-img" src="assets/svg/wallet.svg" alt="collection img"></ion-img>
+            </div>
+            <ion-card-content>
+              <p class="setup-card-text">Once you've set up your wallet of choice, connect it to the App.</p>
+            </ion-card-content>
+          </div>
+        </ion-card>
+        <ion-card class="setup-card ion-padding">
+          <div class="content">
+            <div class="d-flex ion-justify-content-between ion-align-items-center">
+              <h1 class="setup-card-title font-weight-bold">Create your<br> collection</h1>
+              <ion-img class="setup-card-img" src="assets/svg/collection.svg" alt="collection img"></ion-img>
+            </div>
+            <ion-card-content>
+              <p class="setup-card-text">Set up your collection. Add social links, a description & banner.</p>
+            </ion-card-content>
+          </div>
+        </ion-card>
+        <ion-card class="setup-card ion-padding">
+          <div class="content">
+            <div class="d-flex ion-justify-content-between ion-align-items-center">
+              <h1 class="setup-card-title font-weight-bold">Add your<br> NFTs</h1>
+              <ion-img class="setup-card-img" src="assets/svg/nft.svg" alt="collection img"></ion-img>
+            </div>
+            <ion-card-content>
+              <p class="setup-card-text">Upload your work, add a title, description and customize your NFTs.</p>
+            </ion-card-content>
+          </div>
+        </ion-card>
+        <ion-card class="setup-card ion-padding">
+          <div class="content">
+            <div class="d-flex ion-justify-content-between ion-align-items-center">
+              <h1 class="setup-card-title font-weight-bold">List them for<br> sale</h1>
+              <ion-img class="setup-card-img" src="assets/svg/sale.svg" alt="collection img"></ion-img>
+            </div>
+            <ion-card-content>
+              <p class="setup-card-text">You choose how you want to sell your NFTs, and we help you!</p>
+            </ion-card-content>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
