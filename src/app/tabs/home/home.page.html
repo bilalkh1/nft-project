@@ -15,14 +15,14 @@
       <ion-col size="12">
         <div class="d-flex ion-justify-content-between ion-align-items-center">
           <h6 class="release-section-title font-weight-bold">New Release</h6>
-          <span class="see-all">see all</span>
+          <span class="see-all"><a routerLink="/nft/recent-collections" >see all</a></span>
         </div>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col size="12">
         <div *ngFor="let item of [].constructor(3)">
-          <ion-card class="ion-padding-horizontal">
+          <ion-card class="ion-padding-horizontal" (click)="onCollection()">
             <div class="content d-flex justify-content-around ion-align-items-center">
               <ion-img class="release-card-img"
                 [src]="'https://lh3.googleusercontent.com/_hn57CNgbtqSi7fmGhXsBpRk0Ocb0lnQFzHku9hVw1pvtkAtvmXf7k3X6HYqhVwDy4C47McDmikN9Gi5kNrdrVFQG5l0sVeqavCPGQ=s100'"
@@ -48,7 +48,7 @@
     </ion-row>
     <ion-row>
       <ion-col size="12">
-        <ion-card class="ion-padding">
+        <ion-card class="ion-padding" (click)="onCollection()">
           <div *ngFor="let item of [].constructor(4);let i=index"
             class="content d-flex ion-justify-content-between ion-align-items-center ion-margin-bottom">
             <h1 class="collection-number">{{i+1}}</h1>

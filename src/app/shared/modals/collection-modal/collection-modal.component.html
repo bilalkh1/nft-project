@@ -2,7 +2,9 @@
   <div class="collection">
     <div class="collection-header">
       <div class="under-collection-header">
-        <ion-icon name="arrow-back" class="arrow-back"></ion-icon>
+        <ion-buttons slot="start" (click)="closeModal()">
+          <ion-back-button defaultHref="nft/home"></ion-back-button>
+        </ion-buttons>
         <div>
           <h2>Typical Tigers</h2>
           <div class="social-media d-flex justify-content-between align-items-center w-65">
