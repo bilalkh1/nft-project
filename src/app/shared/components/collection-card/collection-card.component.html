@@ -1,19 +1,19 @@
 <ion-card (click)="onCollection()">
-  <div>
-    <ion-img [src]="'https://lh3.googleusercontent.com/tiDirQ65WcCxPh0d6mQoleLloF4Ao_FVAvSbKY0VSIlOQqeTqphr6q3nQesO8SPwFhMQG6-rkDQqiH-eEl-nbIyUcW5dQshff1BEe_E=h220'"></ion-img>
+  <div class="overflow-hidden">
+    <ion-img [src]="collection?.imgCover"></ion-img>
   </div>
 
   <ion-card-content>
     <div class="d-flex justify-content-between align-items-center">
-      <h4 class="title">Typical Tigers</h4>
-      <h6>48 items</h6>
+      <h4 class="title">{{ collection?.name }}</h4>
+      <h6>{{ collection?.nfts?.length }} items</h6>
     </div>
 
     <div class="d-flex justify-content-between align-items-center mt-2">
       <h5>Rarity</h5>
       <h4 class="price d-flex justify-content-between align-items-center">
         <img src="../../../assets/Vector.svg" alt="" width="9">
-        200
+        {{ collection?.volume_all_time }}
       </h4>
     </div>
   </ion-card-content>

@@ -12,9 +12,48 @@
 
   <ion-grid class="collections">
     <ion-row>
-      <ion-col size="12" *ngFor="i of [].constructor(5)">
-        <app-collection-card></app-collection-card>
+      <ion-col size="6" *ngFor="let recentCollection of recentCollections">
+        <ion-card>
+          <div class="bg-primary">
+            <ion-img [src]="recentCollection?.image"></ion-img>
+          </div>
+          <ion-card-content>
+            <h6>{{ recentCollection?.name }}</h6>
+          </ion-card-content>
+        </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
+
+
+  <ion-grid class="all-collections">
+    <ion-row>
+      <ion-col size="12">
+        <h1>Top <br>Collections</h1>
+      </ion-col>
+      <ion-col size="12">
+        <h6>Dicover the Top NFT collections in the market to get the best ones (Based on rarity.tools)</h6>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="collections">
+    <ion-row>
+      <ion-col size="6" *ngFor="let collection of topCollections">
+        <ion-card>
+          <div class="bg-primary">
+            <ion-img [src]="collection?.image"></ion-img>
+          </div>
+          <ion-card-content>
+            <h6>{{ collection?.name }}</h6>
+            <h6>
+              <img src="../../../assets/Vector.svg" alt="" width="9">
+              {{ collection?.volume }}
+            </h6>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

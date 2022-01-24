@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { Collection } from '../../models/Collection';
 
 @Component({
   selector: 'app-collection-modal',
@@ -7,7 +8,7 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./collection-modal.component.scss'],
 })
 export class CollectionModalComponent implements OnInit {
-
+  @Input() collection: Collection;
   constructor(
     private modalController: ModalController,
   ) { }

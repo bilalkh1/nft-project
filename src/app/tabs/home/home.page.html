@@ -21,19 +21,19 @@
     </ion-row>
     <ion-row>
       <ion-col size="12">
-        <div *ngFor="let item of [].constructor(3)">
-          <ion-card class="ion-padding-horizontal" (click)="onCollection()">
+        <div *ngFor="let collection of recentCollections | slice:0:5">
+          <ion-card class="ion-padding-horizontal" (click)="onRecentCollections()">
             <div class="content d-flex justify-content-around ion-align-items-center">
               <ion-img class="release-card-img"
-                [src]="'https://lh3.googleusercontent.com/_hn57CNgbtqSi7fmGhXsBpRk0Ocb0lnQFzHku9hVw1pvtkAtvmXf7k3X6HYqhVwDy4C47McDmikN9Gi5kNrdrVFQG5l0sVeqavCPGQ=s100'"
+                [src]="collection.image"
                 alt="collection img"></ion-img>
               <ion-card-content>
                 <div>
-                  <h6 class="release-card-title font-weight-bold">Rowdy Roos</h6>
+                  <h6 class="release-card-title font-weight-bold">{{ collection.name }}</h6>
                   <p class="release-card-text">After their home planet BOBL was destroyed, 9,999 of the rowdiest</p>
                 </div>
               </ion-card-content>
-              <ion-img src="assets/svg/arrow.svg" alt="arrow"></ion-img>
+              <ion-img src="assets/svg/arrow.svg" alt="arrow" slot="end"></ion-img>
             </div>
           </ion-card>
         </div>
@@ -48,18 +48,18 @@
     </ion-row>
     <ion-row>
       <ion-col size="12">
-        <ion-card class="ion-padding" (click)="onCollection()">
-          <div *ngFor="let item of [].constructor(4);let i=index"
-            class="content d-flex ion-justify-content-between ion-align-items-center ion-margin-bottom">
+        <ion-card class="ion-padding" (click)="onTopCollections()">
+          <div *ngFor="let topCollection of topCollections | slice:0:5;let i=index"
+            class="content d-flex ion-justify-content-start ion-align-items-center ion-margin-bottom">
             <h1 class="collection-number">{{i+1}}</h1>
-            <div class="collection-content d-flex">
+            <div class="collection-content d-flex ion-margin-left">
               <ion-img class="collection-img"
-                [src]="'https://lh3.googleusercontent.com/_hn57CNgbtqSi7fmGhXsBpRk0Ocb0lnQFzHku9hVw1pvtkAtvmXf7k3X6HYqhVwDy4C47McDmikN9Gi5kNrdrVFQG5l0sVeqavCPGQ=s100'"
+                [src]="topCollection.image"
                 alt="collection img"></ion-img>
               <ion-card-content>
                 <div>
-                  <h6 class="collection-title font-weight-bold">Rowdy Roos</h6>
-                  <p class="collection-text d-flex">16,666.24 <ion-img class="collection-eth" src="assets/svg/eth.svg"
+                  <h6 class="collection-title font-weight-bold">{{ topCollection.name }}</h6>
+                  <p class="collection-text d-flex">{{ topCollection.volume }} <ion-img class="collection-eth" src="assets/svg/eth.svg"
                       alt="eth" style="width: 10px"></ion-img>
                   </p>
                 </div>

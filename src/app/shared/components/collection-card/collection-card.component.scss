@@ -11,6 +11,7 @@ ion-card {
   border-radius: 10px;
   ion-img {
     width: 160%!important;
+    max-height: 170px;
   }
 
   h4.price {
@@ -24,4 +25,9 @@ ion-card {
   h5 {
     font-weight: bold;
   }
+}
+
+
+.overflow-hidden {
+  overflow: hidden;
 }
