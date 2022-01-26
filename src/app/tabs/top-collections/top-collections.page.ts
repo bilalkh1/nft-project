@@ -1,3 +1,4 @@
+import { AllCollectionsService } from './../../shared/services/all-collections.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopCollectionsPage implements OnInit {
 
-  constructor() { }
+  constructor(private allCollectionsService: AllCollectionsService) { }
 
   ngOnInit() {
+    this.allCollectionsService.getKMeansCollections()
+    .subscribe((collections) => {
+      console.log(collections);
+    }, (err) => {
+      console.log(err);
+    })
   }
 
 }

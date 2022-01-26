@@ -21,4 +21,8 @@ export class AllCollectionsService {
     return this.http.get(`${this.API_URL}top-collections/list`);
   }
 
+  getKMeansCollections() {
+    return this.http.get(`${this.API_URL}collections/kmeans`);
+  }
+
 }
